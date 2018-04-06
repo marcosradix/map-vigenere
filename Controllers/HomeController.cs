@@ -37,10 +37,10 @@ namespace map_vigenere.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-private static int Mod(int a, int b)
-{
-	return (a % b + b) % b;
-}
+    private static int Mod(int a, int b)
+    {
+        return (a % b + b) % b;
+    }
     private static string Cipher(string input, string key, bool encipher)
     {
 	for (int i = 0; i < key.Length; ++i)
