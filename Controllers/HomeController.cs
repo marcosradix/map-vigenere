@@ -16,7 +16,7 @@ namespace map_vigenere.Controllers
             return View(dados);
         }
         
-              public IActionResult About()
+              public IActionResult Sobre()
         {
             
             return View();
