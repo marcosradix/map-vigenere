@@ -6,9 +6,8 @@ namespace map_vigenere.Models
     {
         public string entradaTextoClaro { get; set; }
         public string saidaTextoCifrado { get; set; }
+         public string chave { get; set; }
         public bool verificar { get; set; }
-
-
        
     }
 }
