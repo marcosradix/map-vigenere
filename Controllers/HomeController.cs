@@ -12,21 +12,22 @@ namespace map_vigenere.Controllers
     {
         public IActionResult Index()
         {
+            IndexViewModel dados = new IndexViewModel();
+            return View(dados);
+        }
+        
+              public IActionResult About()
+        {
+            
             return View();
         }
 
-        public IActionResult About()
+         public IActionResult Executar(IndexViewModel dados)
         {
-            ViewData["Message"] = "Projeto-Map";
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            dados.saidaTextoCifrado = $"Dados Encriptados: {dados.entradaTextoClaro}";
+           
+            return View("Index", dados);
         }
 
         public IActionResult Error()

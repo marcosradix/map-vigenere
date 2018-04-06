@@ -1,15 +1,17 @@
-﻿@{
+﻿@model map_vigenere.Models.IndexViewModel;
+
+@{
     ViewData["Title"] = "Principal";
 }
 
 <div>
     <h1>Principal</h1>
 
-    <form>
+    <form asp-controller="Home" asp-action="Executar" >
   <div class="form-group">
     <label for="entrada">Entre com os dados para criptografar</label>
-    <input type="text" class="form-control"  name="entrada" id="entrada"  placeholder="Entre com os dados para criptografar">
-    <h3>Saída de texto cifrado</h3>
+    <input type="text" class="form-control"  asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para criptografar">
+    <h3>@Model.saidaTextoCifrado</h3>
   </div>
 
   <div class="form-check">
