@@ -7,16 +7,16 @@
 <div>
     <h1>Principal</h1>
 
-    <form asp-controller="Home" asp-action="Executar" >
+    <form asp-controller="Home" asp-action="Executar" role="form" >
   <div class="form-group">
     <label for="entrada">Entre com os dados para criptografar</label>
-    <input type="text" class="form-control"  asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para criptografar">
+    <input type="text" class="form-control" asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para criptografar">
     <h3>@Model.saidaTextoCifrado</h3>
   </div>
 
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Verificar</label>
+    <input type="checkbox" class="form-check-input" asp-for="@Model.verificar" title="desmarcado encriptar e marcado descriptar">
+    <label class="form-check-label" for="exampleCheck1">Encriptar/Descriptar</label>
   </div>
   <button type="submit" class="btn btn-primary">Submeter</button>
 </form>

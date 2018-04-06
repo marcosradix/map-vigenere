@@ -24,9 +24,11 @@ namespace map_vigenere.Controllers
 
          public IActionResult Executar(IndexViewModel dados)
         {
-
-            dados.saidaTextoCifrado = $"Dados Encriptados: {dados.entradaTextoClaro}";
-           
+            if(!dados.verificar){
+                 dados.saidaTextoCifrado = $"Dados Encriptados: {dados.entradaTextoClaro}";
+            }else{
+                dados.saidaTextoCifrado = $"Dados Desciptados: {dados.entradaTextoClaro}";
+            }
             return View("Index", dados);
         }
 
