@@ -10,18 +10,18 @@
     <form asp-controller="Home" asp-action="Executar" role="form" >
   <div class="form-group">
     <label for="entrada">Entre com os dados para criptografar</label>
-    <input type="text" id="entrada" class="form-control" asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para criptografar">
+    <input type="text" id="entrada" class="form-control" asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para encriptar ou descriptar">
     <br>
     <label for="entrada">Entre com a chave</label>
     <input type="text" class="form-control" asp-for="@Model.chave"  placeholder="Informe a chave para encriptar ou descriptar.">
-    <h3>@Model.saidaTextoCifrado</h3>
+    <h3 style="color:rgb(4, 0, 255)" >@Model.saidaTextoCifrado</h3>
   </div>
 
   <div class="form-check">
     <input type="checkbox" class="form-check-input" asp-for="@Model.verificar" title="desmarcado encriptar e marcado descriptar">
     <label class="form-check-label" for="exampleCheck1">Encriptar/Descriptar</label>
   </div>
-  <button type="submit" class="btn btn-primary">Executar</button>
+  <button type="submit" class="btn btn-danger">Executar</button>
 </form>
 
 </div>
