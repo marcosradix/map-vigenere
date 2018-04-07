@@ -10,10 +10,10 @@
     <form asp-controller="Home" asp-action="Executar" role="form" >
   <div class="form-group">
     <label for="entrada">Entre com os dados para criptografar</label>
-    <input type="text" id="entrada" class="form-control" asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para encriptar ou descriptar">
+    <input type="text" id="entrada" class="form-control" required='required' asp-for="@Model.entradaTextoClaro"  placeholder="Entre com os dados para encriptar ou descriptar">
     <br>
     <label for="entradaChave">Entre com a chave</label>
-    <input type="text" id="entradaChave" class="form-control"  asp-for="@Model.chave"  placeholder="Informe a chave para encriptar ou descriptar.">
+    <input type="text" id="entradaChave" class="form-control" required='required' asp-for="@Model.chave"  placeholder="Informe a chave para encriptar ou descriptar.">
     <h3 style="color:rgb(4, 0, 255)" >@Model.saidaTextoCifrado</h3>
   </div>
 

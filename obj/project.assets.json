@@ -12535,23 +12535,23 @@
     ]
   },
   "packageFolders": {
-    "D:\\Usuários\\006427l3\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/marcos/.nuget/packages/": {},
+    "/home/marcos/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cesinf\\dotnet-core\\map-vigenere\\map-vigenere.csproj",
+      "projectUniqueName": "/home/marcos/dotnet-core/map-vigenere/map-vigenere.csproj",
       "projectName": "map-vigenere",
-      "projectPath": "D:\\cesinf\\dotnet-core\\map-vigenere\\map-vigenere.csproj",
-      "packagesPath": "D:\\Usuários\\006427l3\\.nuget\\packages\\",
-      "outputPath": "D:\\cesinf\\dotnet-core\\map-vigenere\\obj\\",
+      "projectPath": "/home/marcos/dotnet-core/map-vigenere/map-vigenere.csproj",
+      "packagesPath": "/home/marcos/.nuget/packages/",
+      "outputPath": "/home/marcos/dotnet-core/map-vigenere/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/home/marcos/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "D:\\Usuários\\006427l3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/marcos/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
