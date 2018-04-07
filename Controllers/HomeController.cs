@@ -25,9 +25,20 @@ namespace map_vigenere.Controllers
          public IActionResult Executar(IndexViewModel dados)
         {
             if(!dados.verificar){
-                 dados.saidaTextoCifrado = $"Dados Encriptados: {EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar)}";
+                    dados.saidaTextoCifrado = EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar);
+                 if( dados.saidaTextoCifrado == null){
+                     dados.saidaTextoCifrado = $"A chave não pode conter números!";
+                 }else{
+                     dados.saidaTextoCifrado = $"Dados Encriptados: {EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar)}";
+                 }
+
             }else{
-                dados.saidaTextoCifrado = $"Dados Desciptados: {EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar)}";
+                dados.saidaTextoCifrado = EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar);
+                if( dados.saidaTextoCifrado == null){
+                      dados.saidaTextoCifrado = $"A chave não pode conter números!";
+                }else{
+                     dados.saidaTextoCifrado = $"Dados Desciptados: {EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar)}";
+                }
             }
             return View("Index", dados);
         }

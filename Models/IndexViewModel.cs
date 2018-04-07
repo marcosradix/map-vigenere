@@ -8,7 +8,8 @@ namespace map_vigenere.Models
         public string saidaTextoCifrado { get; set; }
          public string chave { get; set; }
         public bool verificar { get; set; }
-        public static int alfabeto {get; set;} = 26;
+        private static int tamanhoAlfabeto {get; set;} = 26;
+
     private static int Mod(int a, int b)
     {
         return (a % b + b) % b;
@@ -27,11 +28,11 @@ namespace map_vigenere.Models
 		if (char.IsLetter(entrada[i]))
 		{
 			bool deixarTextoUpper = char.IsUpper(entrada[i]);
-			char padrao = deixarTextoUpper ? 'A' : 'a';
+			char deslocar = deixarTextoUpper ? 'A' : 'a';
 			int chaveIndex = (i - contador) % chave.Length;
-			int k = (deixarTextoUpper ? char.ToUpper(chave[chaveIndex]) : char.ToLower(chave[chaveIndex])) - padrao;
+			int k = (deixarTextoUpper ? char.ToUpper(chave[chaveIndex]) : char.ToLower(chave[chaveIndex])) - deslocar;
 			k = encipher ? k : -k;
-			char ch = (char)((Mod(((entrada[i] + k) - padrao), alfabeto)) + padrao);
+			char ch = (char)((Mod(((entrada[i] + k) - deslocar), tamanhoAlfabeto)) + deslocar);
 			saida += ch;
 		}
 		else
