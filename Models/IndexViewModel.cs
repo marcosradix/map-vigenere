@@ -32,7 +32,7 @@ namespace map_vigenere.Models
 			int chaveIndex = (i - contador) % chave.Length;
 			int k = (deixarTextoUpper ? char.ToUpper(chave[chaveIndex]) : char.ToLower(chave[chaveIndex])) - deslocar;
 			k = encipher ? k : -k;
-			char ch = (char)((Mod(((entrada[i] + k) - deslocar), tamanhoAlfabeto)) + deslocar);
+			char ch = (char)((Mod(((entrada[i] +  k) - deslocar), tamanhoAlfabeto)) + deslocar);
 			saida += ch;
 		}
 		else
