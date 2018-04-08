@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+//qsiq pgajtfo uai uqiia pdd mpdcde ftdrturp eekqrxzo emrp m dxecxblxza sq MPB
 namespace map_vigenere
 {
     public class Startup
