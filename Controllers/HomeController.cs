@@ -12,8 +12,8 @@ namespace map_vigenere.Controllers
     {
         public IActionResult Index()
         {
-            IndexViewModel dados = new IndexViewModel();
-            return View(dados);
+            IndexViewModel valores = new IndexViewModel();
+            return View(valores);
         }
         
               public IActionResult Sobre()
@@ -25,7 +25,7 @@ namespace map_vigenere.Controllers
          public IActionResult Executar(IndexViewModel dados)
         {
             if(!dados.verificar){
-                    dados.saidaTextoCifrado = EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar=true);
+                    dados.saidaTextoCifrado = dados.metodoCifrar();
                  if( dados.saidaTextoCifrado == null){
                      dados.saidaTextoCifrado = $"A chave não pode conter números!";
                  }else{
@@ -33,7 +33,7 @@ namespace map_vigenere.Controllers
                  }
 
             }else{
-                dados.saidaTextoCifrado = EncipherDecipher(dados.entradaTextoClaro, dados.chave ,dados.verificar=false);
+                dados.saidaTextoCifrado = dados.metodoDecifrar();
                 if( dados.saidaTextoCifrado == null){
                       dados.saidaTextoCifrado = $"A chave não pode conter números!";
                 }else{
@@ -46,12 +46,6 @@ namespace map_vigenere.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-
-        public static string EncipherDecipher(string input, string key, bool encipher)
-        {
-            return IndexViewModel.Cipher(input, key, encipher);
         }
 
     }
