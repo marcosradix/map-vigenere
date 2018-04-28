@@ -1,13 +1,13 @@
 namespace map_vigenere.Models
 {
-    public class Decifrar: ICifra
+    public class Decifrar: IDecifra
     {
         
          private static int Mod(int a, int b)
     {
         return (a % b + b) % b;
     }
-    public string CifraDecifra(string entrada, string chave, bool encipher)
+    public string DecifrarDados(string entrada, string chave, bool encipher)
     {
 	for (int i = 0; i < chave.Length; ++i)
 		if (!char.IsLetter(chave[i]))
